@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --clr-primary: hsl(25 97% 53%);
+  --clr-white: hsl(0 100% 100%);
+  --clr-gray-500: hsl(217 12% 63%);
+  --clr-gray-900: hsl(213 19% 18%);
+  --clr-gray-950: hsl(216 12% 8%);
+  --fs-body: 15px;
+  --ff-sans: "Overpass", sans-serif;
+  --radius: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-sans);
+  font-size: var(--fs-body);
+  color: var(--clr-white);
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+.container {
+  display: grid;
+  place-items: center; /* centers horizontally + vertically */
+  height: 100vh; /* full viewport height */
+  background: var(--clr-gray-950); /* dark background */
+}
+
+.card {
+  width: 375px;
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 0.5px solid var(--clr-gray-950);
+  background: linear-gradient(
+    to bottom,
+    var(--clr-gray-900),
+    var(--clr-gray-950)
+  );
+}
+
+.card p {
+  color: var(--clr-gray-500);
+  line-height: 1.5rem;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-around;
+  margin: 1.5rem 0;
+}
+
+.rating button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--clr-gray-500);
+  background: var(--clr-gray-900);
+  color: var(--clr-gray-500);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.rating button:hover {
+  background: var(--clr-primary);
+  color: var(--clr-gray-950);
+  border-color: var(--clr-primary);
+}
+
+.rating button.selected {
+  background-color: var(--clr-white);
+  color: var(--clr-gray-950);
+  border-color: var(--clr-gray-900);
+}
+
+.selected-value p {
+  background: var(--clr-gray-900);
+  border: 1px solid var(--clr-gray-900);
+  color: var(--clr-primary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+}
+
+.submit {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  border: none;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--clr-gray-950);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.submit:hover {
+  background: var(--clr-white);
+  color: var(--clr-gray-950);
+}
+
+.thank-you {
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+  display: none;
+  text-align: center;
+}
+
+.icon-star {
+  background: var(--clr-gray-900);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--clr-gray-900);
+}
