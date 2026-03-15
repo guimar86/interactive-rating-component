@@ -35,7 +35,7 @@ h6 {
 }
 
 .card {
-  width: 375px;
+  max-width: 375px;
   padding: 2rem;
   border-radius: var(--radius);
   border: 0.5px solid var(--clr-gray-950);
@@ -44,6 +44,7 @@ h6 {
     var(--clr-gray-900),
     var(--clr-gray-950)
   );
+  border: 0.25px solid black;
 }
 
 .card p {
