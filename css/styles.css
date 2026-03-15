@@ -35,8 +35,8 @@ h6 {
 }
 
 .card {
-  max-width: 375px;
-  padding: 2rem;
+  width: min(90%, 20rem);
+  padding: calc(1rem + 1vw);
   border-radius: var(--radius);
   border: 0.5px solid var(--clr-gray-950);
   background: linear-gradient(
